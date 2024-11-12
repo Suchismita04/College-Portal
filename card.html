@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card using Css & HTML</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(180deg, rgb(250, 110, 133), rgb(126, 126, 252)30%, violet);
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            /* border: 2px solid black; */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            display: flex;
+            height: 80vh;
+            width: 35vw;
+            /* border: 2px solid black; */
+            border-radius: 0px 0px 250px 250px;
+            background-color: rgb(219, 11, 126);
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in 0s;
+            
+        }
+        .card:hover {
+
+
+            background-color: rgba(255, 255, 255, 0.637);
+            border-radius: 10px;
+
+        }
+
+        #user {
+            position: relative;
+            height: 181px;
+            width: 4px;
+            font-size: 100px;
+            left: 55px;
+            margin-right: 71px;
+            transition: all 0.7s ease-in;
+        }
+
+
+        .card:hover #user {
+            transform: translate(-150px, -70px);
+            height: 350px;
+            width: 4px;
+            left: 55px;
+        }
+
+        .headerSection {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0px;
+            flex-direction: column;
+            top: 45px;
+            left: -50px;
+            position: relative;
+            transition: all 0.7s ease-in;
+        }
+
+        .card:hover .headerSection {
+            transform: translate(0px, -200px);
+            height: 100px;
+            width: 100px;
+            margin: 25px;
+            text-align: center;
+            left: -50px;
+
+        }
+
+        .description {
+            display: flex;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 30%;
+            padding: 10px;
+            opacity: 0;
+            transition: all 0.7s ease-in;
+        }
+
+        .card:hover .description {
+            opacity: 1;
+        }
+
+        .icon{
+            display: flex;
+            /* align-items: center;
+            justify-content: center; */
+            width: 1px;
+            font-size: 25px;
+            position: relative;
+            top: 60px;
+            gap: 24px;
+            opacity: 0;
+            right: 184px;
+            transition: all 0.7s ease-in;
+            
+            
+        }
+        .card:hover .icon{
+            opacity: 1;
+        }
+        #facebook:hover{
+            color:rgb(23, 121, 233) ;
+            
+        }
+        #linkedin:hover{
+            color: rgb(7, 7, 180);
+        }
+        #instagram:hover{
+            color: rgb(240, 64, 172);
+        }
+        #twitter:hover{
+            color: rgb(76, 76, 228);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <i class="fa-solid fa-user" id="user"></i>
+            <div class="headerSection">
+                <h1>Suchismita</h1>
+                <p>Web Developer</p>
+            </div>
+            <div class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate est non sunt, eveniet,
+                iusto quibusdam quam quisquam provident commodi sint deserunt laborum asperiores cumque quod esse sequi
+                eius excepturi.
+            </div>
+            <div class="icon">
+                <i class="fa-brands fa-facebook" id="facebook"></i>
+                <i class="fa-brands fa-linkedin" id="linkedin"></i>
+                <i class="fa-brands fa-instagram" id="instagram"></i>
+                <i class="fa-brands fa-twitter" id="twitter"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
